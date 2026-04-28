@@ -74,7 +74,7 @@ describe("ChatContext", () => {
     );
 
     expect(screen.getByTestId("messages").textContent).toBe("0");
-    expect(screen.getByTestId("input").getAttribute("value")).toBe("");
+    expect((screen.getByTestId("input") as HTMLTextAreaElement).value).toBe("");
     expect(screen.getByTestId("status").textContent).toBe("idle");
   });
 
